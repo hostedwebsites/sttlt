@@ -20,9 +20,8 @@
 </head>
 <body>
   <center>
-    <textarea id="result" cols="30" rows="10"></textarea>
-    <button onclick="copy()">Copy</button>
-    <br>
+    <h1>This webpage is meant for translating from hindi to different languages only so please speak in hindi while giving the speech</h1>
+    <h2 id="result"></h2>
     <button id="btn" onclick='recognition.start()'>SPEECH TO TEXT</button>
     <div id="google_translate_element"></div>
   </center>
@@ -30,7 +29,7 @@
 <script>
   function copy() {
   /* Get the text field */
-  var copyText = document.getElementById("result");
+  var copyText = document.getElementById("tresult");
 
   /* Select the text field */
   copyText.select();
