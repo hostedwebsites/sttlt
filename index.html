@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Speech Recognition</title>
 <script src="Speech to Text.js"></script>
 <style>
@@ -9,39 +12,32 @@
     }
     #result {
       margin-top: 236px;
-      border: 2px solid black;
+      border: 2px solid white;
       border-radius: 12px;
+      font-size: 30px;
     }
     #btn {
+      font-size: 40px;
       margin-top: 20px;
       border-radius: 100px;
+    }
+    div {
+      font-size: 40px;
+    }
+    @media screen and (max-width: 200px) {
+      #result {
+        font-size: 29px;
+      }
     }
 </style>
 </head>
 <body>
   <center>
     <h1>This webpage is meant for translating from hindi to different languages only so please speak in hindi while giving the speech</h1>
-    <h2 id="result"></h2>
+    <label id='result'></label><br>
     <button id="btn" onclick='recognition.start()'>SPEECH TO TEXT</button>
     <div id="google_translate_element"></div>
   </center>
-  
-<script>
-  function copy() {
-  /* Get the text field */
-  var copyText = document.getElementById("tresult");
-
-  /* Select the text field */
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); /* For mobile devices */
-
-   /* Copy the text inside the text field */
-  navigator.clipboard.writeText(copyText.value);
-
-  /* Alert the copied text */
-  alert("Copied the text: " + copyText.value);
-}
-</script>
 
 <script type="text/javascript">
 function googleTranslateElementInit() {
